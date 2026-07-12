@@ -1,4 +1,4 @@
-# song-recommendation-system
+# Song Recommendation System
 
 ## Overview
 
