@@ -12,6 +12,13 @@ audio_df = pd.read_csv(DATA / 'audio_features_transformed.csv').drop('Unnamed: 0
 D_lyrics_df = pd.read_csv(DATA / 'lyrics_dissimilarities.csv')
 D_audio_df = pd.read_csv(DATA / 'audio_dissimilarities.csv')
 
+# cast index/column names to numbers
+D_audio_df.index = D_audio_df.index.astype(int)
+D_audio_df.columns = D_audio_df.columns.astype(int)
+
+D_lyrics_df.index = D_lyrics_df.index.astype(int)
+D_lyrics_df.columns = D_lyrics_df.columns.astype(int)
+
 # string cleaning
 def transform_name(name):
     # get rid of spaces
