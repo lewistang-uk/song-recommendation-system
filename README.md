@@ -6,6 +6,8 @@ A follow on from Imperial College London poster project (Cluster Analysis).
 
 In the original project, audio features from Taylor Swift's music were analysed and clustered. The natural extension was to analyse the lyrics of those songs, allowing for a recommendation system inspired by multi-view clustering.
 
+App link: https://song-recommendation-system-d4iswpem8dnzoxdgqgzadv.streamlit.app/
+
 ---
 
 ## Datasets
