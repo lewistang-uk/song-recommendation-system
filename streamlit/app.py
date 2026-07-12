@@ -9,6 +9,8 @@ DATA = ROOT / "data"
 
 lyrics_df = pd.read_csv(DATA / 'lyrics_transformed.csv').drop('Unnamed: 0', axis=1)
 audio_df = pd.read_csv(DATA / 'audio_features_transformed.csv').drop('Unnamed: 0', axis=1)
+D_lyrics_df = pd.read_csv(DATA / 'lyrics_dissimilarities.csv')
+D_audio_df = pd.read_csv(DATA / 'audio_dissimilarities.csv')
 
 # string cleaning
 def transform_name(name):
@@ -57,24 +59,6 @@ names_df = names_df.merge(id_df, on='name').drop('name', axis=1)
 order = [(names_df['raw'][i], i) for i in range(len(names_df))]
 name_to_id = dict(order)
 id_to_name = dict([(j, i) for (i, j) in order])
-
-# calculate dissimilarity matrices
-lyrics_df = df[lyrics_df.columns].drop('name', axis=1)
-audio_df = df[audio_df.columns].drop(['name', 'album'], axis=1)
-
-from sklearn.metrics import pairwise_distances
-D_lyrics = pairwise_distances(lyrics_df, metric='cosine')
-D_audio = pairwise_distances(audio_df, metric='euclidean')
-
-# Dividing both matrices by max will scale distances to [0, 1], since all d(x, y) are non-negative and d(x, x) = 0 for all observations
-audio_max, lyrics_max = np.max(D_audio), np.max(D_lyrics)
-
-# convert matrices to DataFrames and scale
-D_audio_df = pd.DataFrame(D_audio, columns=[i for i in range(len(df))])
-D_lyrics_df = pd.DataFrame(D_lyrics, columns=[i for i in range(len(df))])
-
-D_audio_df = D_audio_df/audio_max
-D_lyrics_df = D_lyrics_df/lyrics_max
 
 # recommendation algorithms - k-NN based
 def recommend(query_name, alpha=0.5, k=5):
