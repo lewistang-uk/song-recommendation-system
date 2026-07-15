@@ -2,7 +2,7 @@
 
 ## Overview
 
-A follow on from Imperial College London poster project (Cluster Analysis). 
+A follow on from an Imperial College London poster project (Cluster Analysis). 
 
 In the original project, audio features from Taylor Swift's music were analysed and clustered. The natural extension was to analyse the lyrics of those songs, allowing for a recommendation system inspired by multi-view clustering.
 
@@ -50,10 +50,13 @@ Cosine similarity was used for the lyric embeddings and Euclidean distance was u
 
 A linear weighting scheme was designed to allow historical searches to contribute to the recommendation ranking. In addition, the current search was not allowed to appear through infinite penalisation, and past searches were slightly penalised to offer different recommendations.
 
+A LaTeX document outlining this scheme can be found in the repository.
+
 ---
 
 ## Summary
 
+- Applied NLP and other preprocessing techniques to lyrics and audio features of Taylor Swift's music
 - Combined multiple views using convex combinations and various dissimilarity functions
 - Built a recommendation system with the option to weight recommendations towards lyrics or audio
 - Derived and implemented an algorithm to recommend songs using previous searches
