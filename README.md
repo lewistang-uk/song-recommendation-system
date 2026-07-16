@@ -4,7 +4,7 @@
 
 A follow on from an Imperial College London poster project (Cluster Analysis). 
 
-In the original project, audio features from Taylor Swift's music were analysed and clustered. The natural extension was to analyse the lyrics of those songs, allowing for a recommendation system inspired by multi-view clustering.
+In the original project, audio features from Taylor Swift's music were analysed and clustered, showing that her music has variety in style. The natural extension was to analyse the lyrics of those songs, allowing for a recommendation system inspired by multi-view clustering.
 
 App link: https://song-recommendation-system-d4iswpem8dnzoxdgqgzadv.streamlit.app/
 
@@ -29,14 +29,10 @@ Dataset contains lyrics from 64 albums as text files.
 
 ## Workflow
 
-- Clean data
-- Transform features/create embeddings
+- Clean data and transform features/create embeddings
 - Normalise name format in both views
-
-- Build dissimilarity matrices using various dissimilarity functions
-- Normalise dissimilarities
-- Fuse matrices using convex combination
-- Build recommendation function using k-NN
+- Build normalised dissimilarity matrices, fuse using convex combination
+- Build recommendation function using k-NN approach
 - Add weighting scheme for historical searches
 
 ---
