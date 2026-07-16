@@ -31,6 +31,7 @@ Dataset contains lyrics from 64 albums as text files.
 
 - Clean data
 - Transform features/create embeddings
+- Normalise name format in both views
 
 - Build dissimilarity matrices using various dissimilarity functions
 - Normalise dissimilarities
