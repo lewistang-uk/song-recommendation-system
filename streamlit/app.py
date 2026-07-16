@@ -12,14 +12,12 @@ D_audio_df = pd.read_csv(DATA / 'audio_dissimilarities.csv')
 name_to_id = pd.read_csv(DATA / 'name_to_id.csv').set_index('name')
 id_to_name = name_to_id.reset_index().set_index("id")
 
-
 # cast index/column names to numbers
 D_audio_df.index = D_audio_df.index.astype(int)
 D_audio_df.columns = D_audio_df.columns.astype(int)
 
 D_lyrics_df.index = D_lyrics_df.index.astype(int)
 D_lyrics_df.columns = D_lyrics_df.columns.astype(int)
-
 
 # recommendation algorithms - k-NN based
 def recommend(query_name, alpha=0.5, k=5):
