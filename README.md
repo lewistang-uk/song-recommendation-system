@@ -53,7 +53,7 @@ A LaTeX document outlining this scheme can be found in the repository.
 
 ## A/B Testing
 
-An experiment was simulated over three categories of users. Each user listened to three songs from their set of albums. If at least 3 of the top 5 recommendations were not in listening history and were in their category, then the recommendations were marked as good. A significance level of 0.05 and power of 0.8 were used. The control was the simple k-NN recommender, and the alternative was the historical weighted recommender.
+An experiment was simulated over three categories of users. Each user listened to three songs from their set of albums. If at least 3 of the top 5 recommendations were not in listening history and were in their category, then the recommendations were marked as good. A significance level of 0.05 and power of 0.8 were used. The control was the simple k-NN recommender, and the treatment was the historical weighted recommender.
 
 Categories:
 
@@ -61,7 +61,7 @@ Categories:
 - Category 2 (pop): 1989, reputation, Lover, Midnights
 - Category 3 (poetic/indie): folklore, evermore, TTPD
 
-| Segment    | Control rate | Alternative rate | Raw p      | Bonferroni p | Significant? |
+| Segment    | Control rate | Treatment rate | Raw p      | Bonferroni p | Significant? |
 |------------|--------------|------------------|------------|--------------|--------------|
 | Overall    | 71.3%        | 80.3%          | 1.32e-7  | 5.28e-7   | Yes          |
 | Category 1 | 87.5%        | 94.5%          | 4.48e-4 | 1.79e-3  | Yes          |
