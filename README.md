@@ -4,7 +4,7 @@
 
 A follow on from an Imperial College London poster project (Cluster Analysis). 
 
-In the original project, audio features from Taylor Swift's music were analysed and clustered, showing that her music has variety in style. The natural extension was to analyse the lyrics of those songs, allowing for a multi-view recommendation system with an A/B-tested historical weighting system.
+In the original project, audio features from Taylor Swift's music were analysed and clustered, showing that her music has variety in style. The natural extension was to analyse the lyrics of those songs, allowing for a multi-view recommendation system with an (offline) A/B-tested historical weighting system.
 
 App link: https://song-recommendation-system-d4iswpem8dnzoxdgqgzadv.streamlit.app/
 
